@@ -1,0 +1,49 @@
+$emerald: #16a085;
+$gray93: #ededed;
+$gray82: #d2d2d2;
+$gray81: #cfcfcf;
+$mint-blue: #80cbc4;
+
+.form-style {
+  background-color: $gray93;
+  border-color: $gray82;
+  border-radius: 15px;
+  border-width: 5px;
+  box-shadow: 0 1px 0 $gray81;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.action {
+  margin: 3%;
+  padding: 12px;
+}
+
+.button {
+  margin: 5%;
+}
+
+.category {
+  background-color: $gray93;
+  border-radius: 15px;
+  border-width: 5px;
+  box-shadow: 0 1px 0 $gray81;
+  margin-top: 7%;
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.table-cate {
+  background-color: $mint-blue;
+  margin-top: 13%;
+}
