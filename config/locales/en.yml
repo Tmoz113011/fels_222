@@ -19,3 +19,26 @@ en:
       course-title: " TITLE"
       let-start: "Let's start"
       home: "Home"
+  shared:
+    error_messages:
+      sub: "The form contains"
+      error: "error"
+  categories:
+    edit:
+      tilte: "Update Category"
+      save: "Save Change"
+    index:
+      tilte: "Category"
+      new: "New Category"
+      name: "Name"
+      action: "Action"
+      edit: "Edit"
+      delete: "Destroy"
+      confirm: "Are you sure?"
+    new:
+      tilte: "New Category"
+      button_text: "Add New"
+    update:
+      success: "Create Category success"
+    destroy:
+      success: "Category deleted: %{category}"

@@ -1,0 +1,41 @@
+<% provide :title, t(".tilte") %>
+
+<div class="container category">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class= "text-center">
+        <%= t ".tilte" %>
+      </h1>
+      <table class="table table-bordered text-center table-cate">
+        <%= link_to t(".new"), new_category_path,
+         class: "btn btn-primary pull-right button" %>
+        <thead>
+          <tr>
+            <th> <%= t ".name" %> </th>
+            <th colspan="2" class="text-center">
+              <%= t ".action" %>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @category.each do |category| %>
+            <tr >
+              <td>
+                <%= category.name %>
+              </td>
+              <td class="text-center">
+                <%= link_to t(".edit"), edit_category_path category,
+                  class: "btn btn-primary action fa fa-edit" %>
+
+                <%= link_to t("delete"), category, method: :delete,
+                   data: { confirm: t(".confirm") },
+                    class: "btn btn-danger action fa fa-trash" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

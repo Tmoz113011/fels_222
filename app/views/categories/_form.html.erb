@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="category">
+      <div class="form-style">
+        <h1 class="text-center">
+           <%= yield :tilte%>
+        </h1>
+        <div>
+          <%= form_for category do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name, class: "form-control" %>
+            <div class="button text-center">
+              <%= f.submit yield(:button_text), class: "btn btn-primary btn-lg" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
