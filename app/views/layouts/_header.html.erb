@@ -1,0 +1,22 @@
+<nav class="navbar header" data-spy="affix"
+  role="navigation" data-offset-top="130">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to root_path do %>
+        <%= image_tag "logo2.png", class: "brand" %>
+      <% end %>
+    </div>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        <li>
+          <%= link_to t(".home"), root_path,
+            class: "btn btn-lg sign-in-btn btn-white" %>
+        </li>
+        <li>
+          <%= link_to t(".login"), "#",
+            class: "btn btn-lg sign-in-btn btn-white" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

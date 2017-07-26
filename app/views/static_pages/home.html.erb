@@ -1,0 +1,93 @@
+<% provide :title, t(".home") %>
+<span class="splash-globe animated bounceInRight"></span>
+<div class="content center jumbotron">
+  <h1 class="animated bounceInDown" >
+    <%= t ".title" %>
+  </h1>
+  <h2 class="animated bounceInDown">
+    <%= t ".simple-way" %>
+  </h2>
+  <h3 class="animated bounceInDown">
+    <%= t ".info" %>
+  </h3>
+  <h2>
+    <%= link_to t(".start"), "#",
+      class: "animated bounceInLeft btn btn-lg btn-success center" %>
+  </h2>
+</div>
+<div class="contant-bellow" id="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <%= image_tag "like.png", class: "img-reponsive" %>
+      </div>
+      <div class="col-sm-8 about">
+        <h4>
+          <%= t ".best-way" %>
+        </h4>
+        <p>
+          <%= lorem_ipsum(300) %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="catetogory">
+  <h1 class="text-center cat-tilte">
+    <%= t ".cat" %>
+  </h1>
+  <div class="container cat-jumpotron">
+    <div class="row">
+      <div class="col-sm-4 col-md-4">
+        <div class="thumbnail course">
+          <%= image_tag placeholder_image(300) %>
+          <div class="caption">
+            <h3>
+              <%= t "course-title"%>
+            </h3>
+            <p>
+               <%= lorem_ipsum(200) %>
+            </p>
+            <p>
+              <%= link_to t(".let-start"), "#",
+                class: "btn btn-success center-block", role: "button" %>
+            </p>
+          </div>
+         </div>
+        </div>
+
+      <div class="col-sm-4 col-md-4">
+        <div class="thumbnail course">
+          <%= image_tag placeholder_image(300) %>
+          <div class="caption">
+            <h3> <%= t "course-title"%> </h3>
+            <p>
+              <%= lorem_ipsum(200) %>
+            </p>
+            <p>
+               <%= link_to t(".let-start"), "#",
+                class: "btn btn-success center-block", role: "button" %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 col-md-4">
+        <div class="thumbnail course">
+          <%= image_tag placeholder_image(300) %>
+          <div class="caption">
+            <h3> <%= t "course-title"%> </h3>
+            <p>
+               <%= lorem_ipsum(200) %>
+            </p>
+            <p>
+              <%= link_to t(".let-start"), "#",
+                class: "btn btn-success center-block", role: "button" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

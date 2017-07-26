@@ -1,0 +1,149 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+
+// color var
+$white: #fff;
+$blue-mint: #1abc9c;
+$midnight-blue: #2c3e50;
+$gray-medium-light: #eaeaea;
+$blue-soft: #0b3e71;
+$blue-softer: #0d64b0;
+$gray-light: #ecf0f1;
+$emerald: #16a085;
+
+body {
+  background-image: url('star-pattern1.svg'), linear-gradient(to bottom, $blue-soft, $blue-softer);
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 20px;
+
+  .small {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+//header
+.header {
+  background-color: transparent;
+  padding-top: 3%;
+
+  .btn-white {
+    background-color: $white;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: $blue-mint;
+      color: $white;
+    }
+  }
+}
+
+.brand {
+  width: 70%;
+}
+
+.img-reponsive {
+  margin-top: 3%;
+  padding: 5%;
+  width: 59%;
+}
+
+.about {
+  padding: 3%;
+}
+
+.sign-in-btn {
+  color: $blue-mint;
+  margin-top: 2%;
+}
+// scss-lint:disable VendorPrefix
+.affix {
+  background-color: $emerald;
+  padding-top: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  z-index: 99;
+}
+//footer
+
+footer {
+  background-color: $emerald;
+  border-top: 1px solid $gray-medium-light;
+  color: $white;
+  margin-top: 8%;
+  padding-top: 5px;
+}
+
+//content
+
+.btn-success {
+  border-radius: 100px;
+}
+
+.center {
+  background-color: transparent;
+  color: $white;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.content {
+  margin-top: 9%;
+}
+
+.splash-globe {
+  background-image: url('globe1.svg');
+  background-size: 475px;
+  display: table-cell;
+  height: 475px;
+  left: 13%;
+  opacity: .8;
+  position: absolute;
+  vertical-align: center;
+  width: 475px;
+}
+
+.contant-bellow {
+  background: $white;
+  margin-top: 5%;
+  padding: 4%;
+  width: 100%;
+}
+
+.catetogory {
+  margin-top: 6%;
+
+  .course {
+    text-align: center;
+  }
+
+  h1 {
+    color: $white;
+    margin-bottom: 3%;
+  }
+
+  .cat-tilte {
+    margin: 8%;
+  }
+}
