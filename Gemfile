@@ -5,10 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "bcrypt"
 gem "bootstrap-sass"
 gem "brakeman", require: false
 gem "coffee-rails", "~> 4.2"
+gem "config"
 gem "eslint-rails"
+gem "faker"
 gem "font-awesome-rails"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
@@ -24,17 +27,23 @@ gem "scss_lint", require: false
 gem "scss_lint_reporter_checkstyle", require: false
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "will_paginate", "3.1.5"
 
 group :development, :test do
   gem "byebug", platform: :mri
-  gem "sqlite3"
 end
 
 group :development do
   gem "listen", "~> 3.0.5"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem "sqlite3"
   gem "web-console", ">= 3.3.0"
+end
+
+group :production do
+  gem "pg"
+  gem "rails_12factor"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

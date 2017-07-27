@@ -87,9 +87,11 @@ h6 {
 footer {
   background-color: $emerald;
   border-top: 1px solid $gray-medium-light;
+  bottom: 0;
   color: $white;
   margin-top: 8%;
   padding-top: 5px;
+  width: 100%;
 }
 
 //content
@@ -146,4 +148,9 @@ footer {
   .cat-tilte {
     margin: 8%;
   }
+}
+
+.form-login,
+.form-signup {
+  margin-top: 10%;
 }
