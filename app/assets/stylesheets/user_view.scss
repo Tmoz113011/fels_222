@@ -1,0 +1,12 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+
+// color var
+$white: #fff;
+
+.container-user {
+  background: $white;
+  padding: 3%;
+  margin-top: 3%;
+}
