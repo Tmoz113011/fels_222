@@ -10,4 +10,28 @@ class User < ApplicationRecord
   has_many :results, dependent: :destroy
   has_many :words, through: :results
   has_many :answers, through: :results
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@(?:[A-Z0-9-]+\.)+[A-Z]+\z/i
+
+  validates :name, presence: true,
+    length: {maximum: Settings.validates.username.maxium}
+  validates :emails, presence: true,
+    length: {maximum: Settings.validates.emails.maxium},
+    format: {with: VALID_EMAIL_REGEX},
+    uniqueness: {case_sensitive: false}
+  validates :password, presence: true,
+    length: {minimum: Settings.validates.password.minium}, allow_nil: true
+
+  has_secure_password
+
+  before_save :email_downcase
+
+  def current_user? current_user
+    self == current_user
+  end
+
+  private
+  def email_downcase
+    self.emails = emails.downcase
+  end
 end

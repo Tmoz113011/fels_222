@@ -1,0 +1,29 @@
+<%= provide :title, t(".login") %>
+
+<div class="container animated bounceInDown form-login">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1 class= "text-center">
+              <%= t ".login" %>
+            </h1>
+            <%= form_for :session, url: login_path do |f| %>
+              <%= f.label :emails %>
+              <%= f.email_field :emails, class: "form-control" %>
+
+              <%= f.label :password %>
+              <%= f.password_field :password, class: "form-control" %>
+              <hr>
+              <%= f.submit t(".login"), class: "btn btn-lg btn-success btn-block" %>
+            <% end %>
+            <div class="text-center">
+              <%= t ".or" %>
+            </div>
+            <%= link_to t(".signup"), signup_path,
+              class: "btn btn-lg btn-info btn-block"%>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

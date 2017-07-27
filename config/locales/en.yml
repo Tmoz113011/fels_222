@@ -5,6 +5,10 @@ en:
     header:
      home: "HOME"
      login: "LOGIN"
+     logout: "Log out"
+     setting: "Setting"
+     prof: "Profile"
+     user: "User"
     footer:
       copy: "Copyright © E-Learning 2017"
 
@@ -19,3 +23,46 @@ en:
       course-title: " TITLE"
       let-start: "Let's start"
       home: "Home"
+
+  sessions:
+    new:
+      login: "Log in"
+      signup: "SIGN UP!"
+      or: "OR"
+
+    create:
+      error-login: "Invalid email/password combination"
+      problem-login: "Problem login"
+
+  shared:
+    error_messages:
+      sub: "The form contains"
+      error: "error"
+
+  users:
+    new:
+      signup: "Sign up"
+      login: "Login"
+      create: "Create my account"
+      confirm: "Confirmation"
+      please-login: "Please login"
+
+    create:
+      welcome: "Please check your email to activate your account!"
+
+    edit:
+      edit: "Edit users"
+      save: "Save changes"
+      confirm: "Confirmation"
+      update: "Update your profile"
+      change: "Change"
+      warn: "Please log in to access this page"
+      notfound: "User can't be found"
+
+    update:
+      success: "Profile updated"
+      notfound: "User can't be found"
+
+    destroy:
+      success: "User deleted: %{user}"
+      notfound: "User can't be found"
