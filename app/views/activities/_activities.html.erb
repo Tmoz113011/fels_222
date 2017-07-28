@@ -1,0 +1,8 @@
+<li id="activity-<%= activity.id %>">
+  <%= link_to gravatar_for(activity.user, size: 50), activity.user %>
+  <span class="user"><%= link_to activity.user.name, activity.user %></span>
+  <span class="content"><%= activity.activity_type %></span>
+  <span class="timestamp">
+    at <%= time_ago_in_words(activity.created_at) %> ago.
+  </span>
+</li>

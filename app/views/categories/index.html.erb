@@ -1,0 +1,15 @@
+<% provide :title, t(".tilte") %>
+
+<div class="container catetogory">
+  <h1 class="text-center cat-tilte">
+    CATEGORY
+  </h1>
+  <div class="container cat-jumpotron">
+    <div class="row">
+		  <%= render @categories %>
+		  <div class="paginate">
+		  	<%= will_paginate @categories %>
+		  </div>
+  	</div>
+	</div>
+</div>

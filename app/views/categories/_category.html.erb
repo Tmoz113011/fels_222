@@ -1,0 +1,14 @@
+<div class="col-sm-4 col-md-4">
+ <div class="thumbnail course">
+    <%= image_tag placeholder_image(300) %>
+    <div class="caption">
+      <h3>
+        <%= category.name %>
+      </h3>
+      <p>
+        <%= link_to t(".let-start"), "#",
+          class: "btn btn-success center-block", role: "button" %>
+      </p>
+    </div>
+  </div>
+</div>

@@ -47,9 +47,6 @@ en:
       confirm: "Confirmation"
       please-login: "Please login"
 
-    create:
-      welcome: "Please check your email to activate your account!"
-
     edit:
       edit: "Edit users"
       save: "Save changes"

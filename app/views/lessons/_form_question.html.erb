@@ -1,0 +1,19 @@
+<%= form_for :lesson do |f|%>
+  <div class="panel-heading">
+    <h3 class="panel-title">
+
+    </h3>
+  </div>
+  <div class="panel-body btn btn-info">
+    <%= f.fields_for :results do |result| %>
+      <%= result.answers.each do |answers| %>
+        <li>
+          <label>
+            <%= f.radio_button :answer_id, answers.id %>
+            <%= answers.content %>
+          </label>
+        </li>
+      <%end %>
+    <% end %>
+  </div>
+<% end %>
