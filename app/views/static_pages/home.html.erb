@@ -27,7 +27,7 @@
           <hr>
           <% if current_user.activities.any? %>
             <ol class="activity">
-
+              <%= render "shared/activities" %>
             </ol>
           <% end %>
         </div>

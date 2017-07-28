@@ -1,11 +1,6 @@
-<div class="panel panel-success container ">
-  <div class="row">
-    <div class="col-sm-2">
-      <%= link_to gravatar_for(current_user,
-        size: 20), current_user %>
-    </div>
-    <div class="col-sm-7">
-      <%= render @activities %>
-    </div>
-  </div>
-</div>
+<% if @activities_item.any? %>
+  <ol class="activity">
+    <%= render @activities_item %>
+  </ol>
+  <%= will_paginate @activities_item %>
+<% end %>

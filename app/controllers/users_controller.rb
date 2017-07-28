@@ -21,7 +21,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @activity = @user,activities.paginate(page: params[:page])
+  end
 
   def edit; end
 
