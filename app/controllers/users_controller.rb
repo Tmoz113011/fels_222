@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:new, :create, :show]
   before_action :find_user, except: [:new, :index, :create]
+  before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   def index
     @users = User.paginate page: params[:page]
@@ -56,5 +58,15 @@ class UsersController < ApplicationController
 
   def find_user
     user = User.find_by id: params[:id]
+  end
+
+  def correct_user
+    return if @user.current_user? current_user
+    redirect_to root_url
+  end
+
+  def admin_user
+    return if current_user.admin?
+    redirect_to root_url
   end
 end
